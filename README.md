@@ -2,8 +2,17 @@
 Researched and deployed a ReactJS app on Docker 
 https://github.com/phudinhtruongk18/StolenProject
 
-# ORGIN
-YOUTUBE LINK
-https://www.youtube.com/watch?v=gM2cWo1DWIk&ab_channel=CloudVersity
-SRC
-https://gitlab.com/cloud-versity/docker101-dockerize-your-react-app
+# ORGIN by CloudVersity
+- YOUTUBE: https://www.youtube.com/watch?v=gM2cWo1DWIk&ab_channel=CloudVersity
+- Gitlab: https://gitlab.com/cloud-versity/docker101-dockerize-your-react-app
+
+# Development
+
+```
+docker-compose up 
+```
+# Production
+
+```
+docker-compose -f prod.docker-compose.yml up 
+```

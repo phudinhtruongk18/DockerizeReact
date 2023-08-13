@@ -62,7 +62,8 @@ export const refresh = createAsyncThunk(
   async ({ dispatch, navigate }, thunkAPI) => {
     try {
       if (localStorage.getItem("token") === null) {
-        navigate("/login");
+        navigate("/home");
+        // navigate("/login");
       }
       const response = await LoginService.refresh();
       localStorage.setItem("token", response.token);

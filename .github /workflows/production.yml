@@ -1,0 +1,29 @@
+# SSH_HOST
+# --------Production------------
+# SSH_USER
+# SSH_KEY
+# REPO_PATH
+
+name: Deploy Production
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - name: To the moon 🚀 🌑 🌒 🌓 🌔 🌕
+      uses: appleboy/ssh-action@v0.1.8
+      with:
+        command_timeout: 40m
+        host: ${{ secrets.SSH_HOST }}
+        port: ${{ secrets.SSH_PORT }}
+        username: ${{ secrets.SSH_USER }}
+        key: ${{ secrets.SSH_KEY }}
+        script: |
+          cd ${{ secrets.REPO_PATH}}
+          git pull
+          docker-compose -f prod.docker-compose.yml up --build

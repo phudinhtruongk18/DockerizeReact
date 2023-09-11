@@ -16,3 +16,6 @@ docker-compose up
 ```
 docker-compose -f prod.docker-compose.yml up --build
 ```
+
+
+issue: https://stackoverflow.com/questions/27928372/react-router-urls-dont-work-when-refreshing-or-writing-manually
